@@ -11,8 +11,8 @@ categories/
   home-services.html        Example category listing page (duplicate per category)
 businesses/                 Live business pages go here (empty for now)
 assets/
-  logo.svg                  Full logo (mark + wordmark)
-  mark.svg                  Icon-only mark (favicon, badges)
+  logo.png                  Full logo (mark + wordmark)
+  mark.svg                  Icon-only mark (favicon, badges) — still needed
 css/style.css               Shared stylesheet for every page
 .github/workflows/deploy.yml
 ```
