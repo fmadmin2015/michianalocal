@@ -12,7 +12,7 @@ categories/
 businesses/                 Live business pages go here (empty for now)
 assets/
   logo.png                  Full logo (mark + wordmark)
-  mark.svg                  Icon-only mark (favicon, badges) — still needed
+  mark.png                  Icon-only mark, cropped from logo.png (favicon, badges)
 css/style.css               Shared stylesheet for every page
 .github/workflows/deploy.yml
 ```
