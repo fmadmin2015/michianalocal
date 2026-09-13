@@ -169,10 +169,13 @@ section[id] {
 }
 
 .hero .wrap {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-copy {
+  max-width: 640px;
 }
 
 .hero h1 {
@@ -193,24 +196,17 @@ section[id] {
   gap: 16px;
 }
 
-.hero-motif {
+.hero-map {
   width: 100%;
-  max-width: 340px;
-  justify-self: center;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(13, 46, 36, 0.08);
 }
 
 @media (max-width: 860px) {
   .hero {
     padding-block: 48px 56px;
-  }
-
-  .hero .wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-motif {
-    max-width: 240px;
-    order: -1;
   }
 }
 
