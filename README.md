@@ -32,7 +32,7 @@ Duplicate `categories/home-services.html`, update the title/description/breadcru
 
 ## Instagram feed
 
-The homepage embeds a feed via [SnapWidget](https://snapwidget.com) (free tier, no Instagram API approval needed — Instagram's own embed API requires a review process that isn't worth it for a simple feed). Create a widget there for the `@michianalocal` account and swap the placeholder `src` in `index.html`'s `.ig-embed-frame` for the real widget URL.
+The homepage embeds a feed via [SociableKIT](https://sociablekit.com) (free tier — 1 widget, 2,000 views/month, manual sync, small watermark — no Instagram API approval needed). Create an Instagram feed widget there for the `@michianalocal` account, grab its embed link (Embed on Website > Website > Link), and swap the placeholder `src` in `index.html`'s `.ig-embed-frame` for it.
 
 ## Deploy
 
