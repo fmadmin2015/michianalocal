@@ -11,8 +11,8 @@ categories/
   home-services.html        Example category listing page (duplicate per category)
 businesses/                 Live business pages go here (empty for now)
 assets/
-  logo.svg                  Full logo (mark + wordmark)
-  mark.svg                  Icon-only mark (favicon, badges)
+  logo.png                  Full logo (ML mark + wordmark, vertical lockup)
+  mark.png                  Icon-only ML mark (favicon, badges)
 css/style.css               Shared stylesheet for every page
 .github/workflows/deploy.yml
 ```
@@ -42,4 +42,4 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 
 - Real category list/count — the seven categories on the homepage are a starting proposal, not final.
 - First business page isn't built yet since there's no client content to put in it — once you have your first Trust Drive signee, send me their info and I'll build the real page from the template.
-- Logo is a first pass (two overlapping arcs = Michigan + Indiana meeting at Michiana). Happy to iterate if it's not landing.
+- Only the header and footer are styled so far (`css/style.css`). The hero, categories, and other homepage sections still need their own layout/design pass.

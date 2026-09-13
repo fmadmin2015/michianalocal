@@ -1,0 +1,198 @@
+/* Michianalocal — base styles + header/footer
+   Scope: global reset/typography, site header, brand lockup, nav, buttons,
+   and the site footer. Section-specific layout (hero, categories, etc.)
+   is not styled yet — this file only covers what the header/footer need. */
+
+:root {
+  --ink: #0D2E24;
+  --green: #124B3A;
+  --green-accent: #3D8563;
+  --green-light: #7FB89A;
+  --paper: #F4F3EF;
+  --border: rgba(13, 46, 36, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-solid {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn-solid:hover {
+  background: var(--ink);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--green);
+  color: var(--green);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+/* Brand lockup — mark + wordmark, used in header and footer */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: block;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.brand-accent {
+  font-weight: 500;
+  color: var(--green-accent);
+}
+
+/* Site header */
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 14px;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.primary-nav a:hover {
+  color: var(--green-accent);
+}
+
+@media (max-width: 720px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    padding-block: 12px;
+  }
+
+  .primary-nav {
+    order: 3;
+    width: 100%;
+    gap: 18px;
+  }
+}
+
+/* Site footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+  padding-block: 40px 24px;
+}
+
+.site-footer .wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+}
+
+.site-footer h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--green-accent);
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.site-footer a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.site-footer a:hover {
+  color: var(--green-accent);
+}
+
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--green-accent);
+}
+
+@media (max-width: 720px) {
+  .site-footer .wrap {
+    grid-template-columns: 1fr;
+  }
+}
