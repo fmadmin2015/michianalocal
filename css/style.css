@@ -169,13 +169,14 @@ section[id] {
 }
 
 .hero .wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
 }
 
 .hero-copy {
-  max-width: 640px;
+  max-width: 560px;
 }
 
 .hero h1 {
@@ -207,6 +208,18 @@ section[id] {
 @media (max-width: 860px) {
   .hero {
     padding-block: 48px 56px;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero-map {
+    order: -1;
   }
 }
 
