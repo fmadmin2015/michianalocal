@@ -1,31 +1,54 @@
-/* Michianalocal — base styles + header/footer
-   Scope: global reset/typography, site header, brand lockup, nav, buttons,
-   and the site footer. Section-specific layout (hero, categories, etc.)
-   is not styled yet — this file only covers what the header/footer need. */
+/* Michianalocal — site stylesheet
+   Base reset/typography, header, footer, and every homepage section. */
 
 :root {
   --ink: #0D2E24;
   --green: #124B3A;
   --green-accent: #3D8563;
   --green-light: #7FB89A;
+  --green-mist: #E4EEE8;
   --paper: #F4F3EF;
+  --muted: rgba(13, 46, 36, 0.68);
   --border: rgba(13, 46, 36, 0.1);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --font-brand: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  line-height: 1.55;
 }
 
 a {
   color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+section[id] {
+  scroll-margin-top: 84px;
 }
 
 .wrap {
@@ -79,7 +102,7 @@ a {
 }
 
 .brand-name {
-  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-brand);
   font-weight: 700;
   font-size: 19px;
   letter-spacing: -0.01em;
@@ -138,6 +161,310 @@ a {
     width: 100%;
     gap: 18px;
   }
+}
+
+/* Hero */
+.hero {
+  padding-block: 76px 92px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  max-width: 16ch;
+}
+
+.hero .lede {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 0 0 32px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-motif {
+  width: 100%;
+  max-width: 340px;
+  justify-self: center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding-block: 48px 56px;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-motif {
+    max-width: 240px;
+    order: -1;
+  }
+}
+
+/* About Michiana */
+.about-region {
+  padding-block: 80px;
+  background: #fff;
+}
+
+.about-region .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.about-region p {
+  color: var(--muted);
+  max-width: 58ch;
+  margin: 0 0 16px;
+}
+
+.about-region p:last-child {
+  margin-bottom: 0;
+}
+
+.region-map {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 860px) {
+  .about-region {
+    padding-block: 56px;
+  }
+
+  .about-region .wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Categories */
+.categories {
+  padding-block: 80px;
+}
+
+.section-intro {
+  max-width: 62ch;
+  color: var(--muted);
+  margin: 0 0 40px;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  min-height: 150px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(13, 46, 36, 0.1);
+}
+
+.cat-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 240px;
+  padding: 32px;
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.cat-card.large .cat-name,
+.cat-card.large .cat-count {
+  color: #fff;
+}
+
+.cat-card.large .cat-count {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cat-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--ink);
+}
+
+.cat-count {
+  font-size: 13.5px;
+  color: var(--green-accent);
+}
+
+@media (max-width: 860px) {
+  .categories {
+    padding-block: 56px;
+  }
+
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cat-card.large {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 150px;
+  }
+}
+
+/* Social feed */
+.social-strip {
+  padding-block: 80px;
+  background: #fff;
+  text-align: center;
+}
+
+.social-strip .wrap {
+  max-width: 640px;
+}
+
+.social-strip p {
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+.ig-embed-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper);
+}
+
+@media (max-width: 860px) {
+  .social-strip {
+    padding-block: 56px;
+  }
+}
+
+/* Newest listings */
+.newest {
+  padding-block: 80px;
+}
+
+.newest-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.newest-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.newest-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(13, 46, 36, 0.1);
+}
+
+.newest-card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.newest-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cat-tag {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--green);
+  background: var(--green-mist);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+@media (max-width: 860px) {
+  .newest {
+    padding-block: 56px;
+  }
+
+  .newest-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* List your business CTA */
+.list-cta {
+  padding-block: 72px;
+  background: var(--ink);
+  color: #fff;
+}
+
+.list-cta .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.list-cta h2 {
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.list-cta p {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 56ch;
+  margin: 0;
+}
+
+.list-cta .btn-solid {
+  background: #fff;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.list-cta .btn-solid:hover {
+  background: var(--green-light);
 }
 
 /* Site footer */

@@ -42,4 +42,4 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 
 - Real category list/count — the seven categories on the homepage are a starting proposal, not final.
 - First business page isn't built yet since there's no client content to put in it — once you have your first Trust Drive signee, send me their info and I'll build the real page from the template.
-- Only the header and footer are styled so far (`css/style.css`). The hero, categories, and other homepage sections still need their own layout/design pass.
+- `business-template.html`'s inner sections (hero, trust rail, FAQ, etc.) still use the original unstyled markup — only the header/footer share the homepage's design system so far.
