@@ -573,6 +573,31 @@ section[id] {
   border-bottom: 1px solid var(--border);
 }
 
+.biz-hero-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.biz-logo {
+  height: 72px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .biz-hero-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .biz-logo {
+    height: 56px;
+  }
+}
+
 .biz-hero .cat-tag {
   display: inline-block;
   margin-bottom: 14px;
