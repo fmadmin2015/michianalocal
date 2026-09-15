@@ -574,28 +574,31 @@ section[id] {
 }
 
 .biz-hero-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: 48px;
 }
 
 .biz-logo {
-  height: 72px;
-  width: auto;
-  max-width: 140px;
+  height: auto;
+  width: 100%;
+  max-width: 220px;
+  max-height: 130px;
   object-fit: contain;
-  flex-shrink: 0;
+  object-position: left top;
+  justify-self: start;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .biz-hero-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .biz-logo {
-    height: 56px;
+    max-width: 160px;
+    max-height: 80px;
     order: -1;
   }
 }
