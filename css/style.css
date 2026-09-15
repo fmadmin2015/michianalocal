@@ -408,6 +408,14 @@ section[id] {
   box-shadow: 0 14px 28px rgba(13, 46, 36, 0.1);
 }
 
+.newest-logo {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+
 .newest-card h3 {
   font-size: 18px;
   margin: 0;
