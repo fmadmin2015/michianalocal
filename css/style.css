@@ -573,34 +573,13 @@ section[id] {
   border-bottom: 1px solid var(--border);
 }
 
-.biz-hero-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: start;
-  gap: 48px;
-}
-
 .biz-logo {
-  height: auto;
   width: 100%;
   max-width: 220px;
-  max-height: 130px;
+  height: auto;
+  max-height: 220px;
   object-fit: contain;
   object-position: left top;
-  justify-self: start;
-}
-
-@media (max-width: 900px) {
-  .biz-hero-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .biz-logo {
-    max-width: 160px;
-    max-height: 80px;
-    order: -1;
-  }
 }
 
 .biz-hero .cat-tag {
