@@ -814,3 +814,64 @@ section[id] {
     padding-block: 40px;
   }
 }
+
+/* Business links reference page */
+.link-table-section {
+  padding-block: 40px 80px;
+}
+
+.link-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.link-table th,
+.link-table td {
+  text-align: left;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+
+.link-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.link-table td {
+  color: var(--muted);
+}
+
+.link-table td:first-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.link-table a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.link-table a:hover {
+  color: var(--green-accent);
+}
+
+.link-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .link-table-section .wrap {
+    overflow-x: auto;
+  }
+
+  .link-table {
+    min-width: 560px;
+  }
+}
