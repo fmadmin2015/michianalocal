@@ -41,5 +41,5 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 
 ## Still open
 
-- Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html` exists so far.
-- HS Construction (`categories/home-services/hsconstructiongroup.html`) is the first live business page. It's a service-area business with no public street address, so its NAP card shows service area instead of an address and skips the Google Maps embed — most future businesses will have a real address to fill in instead.
+- Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html` and `categories/food-drink.html` exist so far.
+- Two live business pages: `categories/home-services/hsconstructiongroup.html` (service-area business, no public address, so its NAP card shows service area instead and skips the Google Maps embed) and `categories/food-drink/thetaridgecoffee.html` (has a real address + Maps embed — the more typical case going forward).
