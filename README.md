@@ -40,5 +40,5 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 
 ## Still open
 
-- Real category list/count — the seven categories on the homepage are a starting proposal, not final.
-- First business page isn't built yet since there's no client content to put in it — once you have your first Trust Drive signee, send me their info and I'll build the real page from the template.
+- Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html` exists so far.
+- HS Construction (`businesses/hsconstructiongroup.html`) is the first live business page. It's a service-area business with no public street address, so its NAP card shows service area instead of an address and skips the Google Maps embed — most future businesses will have a real address to fill in instead.
