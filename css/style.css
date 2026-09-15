@@ -582,15 +582,15 @@ section[id] {
 
 .biz-logo {
   width: 100%;
-  max-width: 220px;
+  max-width: 160px;
   height: auto;
-  max-height: 220px;
+  max-height: 160px;
   object-fit: contain;
   object-position: left top;
   flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .biz-hero-row {
     flex-direction: column;
     gap: 16px;
