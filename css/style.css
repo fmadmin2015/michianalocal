@@ -576,6 +576,7 @@ section[id] {
 .biz-hero-row {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 24px;
 }
 
@@ -595,6 +596,7 @@ section[id] {
 
   .biz-logo {
     height: 56px;
+    order: -1;
   }
 }
 
