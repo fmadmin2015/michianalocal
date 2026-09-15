@@ -41,5 +41,8 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 
 ## Still open
 
-- Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html` and `categories/food-drink.html` exist so far.
-- Two live business pages: `categories/home-services/hsconstructiongroup.html` (service-area business, no public address, so its NAP card shows service area instead and skips the Google Maps embed) and `categories/food-drink/thetaridgecoffee.html` (has a real address + Maps embed — the more typical case going forward).
+- Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html`, `categories/food-drink.html`, and `categories/professional-services.html` exist so far.
+- Three live business pages:
+  - `categories/home-services/hsconstructiongroup.html` — service-area business, no public address, so its NAP card shows service area instead and skips the Google Maps embed.
+  - `categories/food-drink/thetaridgecoffee.html` — has a real address + Maps embed, the more typical case.
+  - `categories/professional-services/fuelmarketing.html` — no address or reliable Maps embed was provided (the given embed URL centers on open ocean, not a real geocoded location), so its NAP card only shows phone/hours and skips both the address and the map card entirely.
