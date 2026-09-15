@@ -8,8 +8,9 @@ Directory site for Trust Drive clients across the Michiana region. Static HTML/C
 index.html                  Homepage
 business-template.html      Master template — copy this for every new business
 categories/
-  home-services.html        Example category listing page (duplicate per category)
-businesses/                 Live business pages go here (empty for now)
+  home-services.html        Category listing page (duplicate per category)
+  home-services/             Business pages in this category
+    hsconstructiongroup.html
 assets/
   logo.png                  Full logo (ML mark + wordmark, vertical lockup)
   mark.png                  Icon-only ML mark (favicon, badges)
@@ -19,7 +20,7 @@ css/style.css               Shared stylesheet for every page
 
 ## Adding a new business (once they sign for Trust Drive)
 
-1. Copy `business-template.html` into `businesses/[business-slug].html`.
+1. Copy `business-template.html` into `categories/[category-slug]/[business-slug].html` (e.g. `categories/home-services/hsconstructiongroup.html`). URLs read as `michianalocal.com/categories/[category]/[business]`.
 2. Replace every `[BRACKETED]` value — including inside the two `<script type="application/ld+json">` blocks at the top. These power the SEO/GEO/AEO schema; don't skip them.
 3. Paste the business's **ReviewSpark** embed code into the `<!-- REVIEWSPARK_EMBED_CODE_HERE -->` placeholder under `#reviews`.
 4. Get the business's Google Maps embed URL (Google Maps → their listing → Share → Embed a map → copy the `src`) and drop it into the `iframe` in `.map-embed`.
@@ -41,4 +42,4 @@ Same pattern as `fmadmin2015/Trust-Drive-Landing-Page`: push to `main`, GitHub A
 ## Still open
 
 - Real category list/count — the seven categories on the homepage are a starting proposal, not final. Only `categories/home-services.html` exists so far.
-- HS Construction (`businesses/hsconstructiongroup.html`) is the first live business page. It's a service-area business with no public street address, so its NAP card shows service area instead of an address and skips the Google Maps embed — most future businesses will have a real address to fill in instead.
+- HS Construction (`categories/home-services/hsconstructiongroup.html`) is the first live business page. It's a service-area business with no public street address, so its NAP card shows service area instead of an address and skips the Google Maps embed — most future businesses will have a real address to fill in instead.

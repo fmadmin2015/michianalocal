@@ -6,17 +6,18 @@
 
 <!-- ============================================================
      MICHIANALOCAL BUSINESS PAGE TEMPLATE
-     Copy this file per business. Replace every [BRACKETED] value.
+     Copy this file to categories/[category-slug]/[business-slug].html
+     per business. Replace every [BRACKETED] value.
      Do not change the structure/class names — style.css depends on them.
      ============================================================ -->
 
 <title>[Business Name] — [Category] in [City], Michiana | Michianalocal</title>
 <meta name="description" content="[Business Name] is a [category] serving [City] and the greater Michiana area. [One-sentence value prop]. See hours, reviews, and contact info.">
-<link rel="icon" href="../assets/mark.png" type="image/png">
+<link rel="icon" href="../../assets/mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 <!-- ============================================================
      LocalBusiness schema — this is the core SEO/GEO/AEO signal.
@@ -28,9 +29,9 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "[Business Name]",
-  "image": "[https://michianalocal.com/businesses/BUSINESS-SLUG/photo.jpg]",
+  "image": "[https://michianalocal.com/assets/businesses/BUSINESS-SLUG.jpg]",
   "description": "[One to two sentence definitional description — what the business is and does.]",
-  "url": "https://michianalocal.com/businesses/[business-slug].html",
+  "url": "https://michianalocal.com/categories/[category-slug]/[business-slug].html",
   "telephone": "[(574) 555-0100]",
   "priceRange": "[$$]",
   "address": {
@@ -91,30 +92,30 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="../index.html">
-      <img class="brand-mark" src="../assets/mark.png" alt="" width="40" height="40">
+    <a class="brand" href="../../index.html">
+      <img class="brand-mark" src="../../assets/mark.png" alt="" width="40" height="40">
       <span class="brand-name">Michiana<span class="brand-accent">Local</span></span>
     </a>
     <nav class="primary-nav">
-      <a href="../index.html#categories">Categories</a>
-      <a href="../index.html#about-michiana">About Michiana</a>
-      <a href="../index.html#newest">Newest listings</a>
+      <a href="../../index.html#categories">Categories</a>
+      <a href="../../index.html#about-michiana">About Michiana</a>
+      <a href="../../index.html#newest">Newest listings</a>
     </nav>
-    <a class="btn btn-solid" href="../index.html#list-your-business">List your business</a>
+    <a class="btn btn-solid" href="../../index.html#list-your-business">List your business</a>
   </div>
 </header>
 
 <nav class="breadcrumbs">
   <div class="wrap">
-    <a href="../index.html">Home</a> /
-    <a href="../categories/[category-slug].html">[Category]</a> /
+    <a href="../../index.html">Home</a> /
+    <a href="../[category-slug].html">[Category]</a> /
     <span>[Business Name]</span>
   </div>
 </nav>
 
 <section class="biz-hero">
   <div class="wrap biz-hero-row">
-    <img class="biz-logo" src="../assets/businesses/[business-slug].png" alt="[Business Name] logo">
+    <img class="biz-logo" src="../../assets/businesses/[business-slug].png" alt="[Business Name] logo">
     <div>
       <span class="cat-tag">[Category]</span>
       <h1>[Business Name]</h1>
@@ -212,7 +213,7 @@
     </div>
 
     <div class="rail-card michianalocal-badge">
-      <img src="../assets/mark.png" alt="" width="28" height="28">
+      <img src="../../assets/mark.png" alt="" width="28" height="28">
       <span>Verified Trust Drive business on Michianalocal</span>
     </div>
 
@@ -222,8 +223,8 @@
 <footer class="site-footer">
   <div class="wrap">
     <div>
-      <a class="brand brand-footer" href="../index.html">
-        <img class="brand-mark" src="../assets/mark.png" alt="" width="32" height="32">
+      <a class="brand brand-footer" href="../../index.html">
+        <img class="brand-mark" src="../../assets/mark.png" alt="" width="32" height="32">
         <span class="brand-name">Michiana<span class="brand-accent">Local</span></span>
       </a>
       <p style="margin-top:14px; max-width:38ch;">A directory of trusted, locally owned businesses across the Michiana region.</p>
@@ -231,8 +232,8 @@
     <div>
       <h4>Explore</h4>
       <ul>
-        <li><a href="../index.html#categories">Categories</a></li>
-        <li><a href="../index.html#about-michiana">About Michiana</a></li>
+        <li><a href="../../index.html#categories">Categories</a></li>
+        <li><a href="../../index.html#about-michiana">About Michiana</a></li>
       </ul>
     </div>
     <div>
