@@ -573,6 +573,13 @@ section[id] {
   border-bottom: 1px solid var(--border);
 }
 
+.biz-hero-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 .biz-logo {
   width: 100%;
   max-width: 220px;
@@ -580,6 +587,18 @@ section[id] {
   max-height: 220px;
   object-fit: contain;
   object-position: left top;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .biz-hero-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .biz-logo {
+    order: -1;
+  }
 }
 
 .biz-hero .cat-tag {
