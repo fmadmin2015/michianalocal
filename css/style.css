@@ -740,6 +740,11 @@ section[id] {
   color: var(--green-accent);
 }
 
+.rail-card.nap .btn-solid,
+.rail-card.nap .btn-solid:hover {
+  color: #fff;
+}
+
 .map-embed iframe {
   display: block;
   width: 100%;
