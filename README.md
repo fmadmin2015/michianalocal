@@ -33,7 +33,7 @@ Duplicate `categories/home-services.html`, update the title/description/breadcru
 
 ## Instagram feed
 
-The homepage embeds a live feed via [SociableKIT](https://sociablekit.com) (free tier — 1 widget, 2,000 views/month, manual sync, small watermark — no Instagram API approval needed), wired up for the `@michianalocal` account. To swap the widget (new account, layout change, etc.), create a new one at sociablekit.com, grab its embed link (Embed on Website > Website > Link), and replace the `src` in `index.html`'s `.ig-embed-frame`.
+The homepage embeds a feed via [CollectSocials](https://collectsocials.com) (free tier — 3 sources, 2,000 views/month, automatic daily sync, no watermark — no Instagram API approval needed). Create a feed there for the `@michianalocal` account, copy its embed `<script>` snippet, and swap the placeholder `data-feed` value in `index.html`'s `.ig-embed-frame` for the real one.
 
 ## Deploy
 
